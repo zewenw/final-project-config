@@ -1,7 +1,0 @@
-server:
-  port: 12306
-
-logging:
-  level:
-    root: debug
-    org.springframework.security: trace
