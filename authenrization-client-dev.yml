@@ -12,6 +12,9 @@ spring:
       max-lifetime: 540000
       connection-test-query: SELECT 1
 
+authorization:
+  url: http://auth-server:${server.port}
+
 logging:
   level:
     root: info
