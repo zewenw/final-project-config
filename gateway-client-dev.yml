@@ -2,3 +2,9 @@ logging:
   level:
     root: info
     org.springframework.security: trace
+
+spring:
+  session:
+    redis:
+      flush-mode: on_save # session refresh mode
+      namespace: gateway:session # namespace for keys used to store sessions
