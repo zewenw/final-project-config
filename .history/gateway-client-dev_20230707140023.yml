@@ -1,0 +1,12 @@
+
+logging:
+  level:
+    root: info
+    org.springframework.security: trace
+
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+>>>>>>> 2df7f9afef692b0c3ee21ff6c4495e172cd40748
