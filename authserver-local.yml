@@ -13,7 +13,7 @@ spring:
       connection-test-query: SELECT 1
 
 authorization:
-  url: http://127.0.0.1:${server.port}
+  url: http://auth-server:${server.port}
 
 logging:
   level:
