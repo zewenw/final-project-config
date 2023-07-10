@@ -13,7 +13,7 @@ spring:
       connection-test-query: SELECT 1
 
 authorization:
-  url: http://auth-server:${server.port}
+  url: http://authserver:${server.port}
 
 logging:
   level:
@@ -25,4 +25,4 @@ eureka:
     instance-id: ${spring.application.name}:${instanceId:${random.value}}}
   client:
     service-url:
-      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+      defaultZone: http://eurekaserver:8999/eureka/
