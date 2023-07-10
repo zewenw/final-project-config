@@ -24,11 +24,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: ${SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUERURI}
-#eureka:
-#  client:
-#    service-url:
-#      defaultZone: http://127.0.0.1:8999/eureka
+          issuer-uri: http://authserver:9000
 
 custom:
   id: 2
