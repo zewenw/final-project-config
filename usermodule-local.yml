@@ -24,7 +24,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://authserver:9000
+          issuer-uri: http://auth-server:9000
 
 custom:
   id: 2
