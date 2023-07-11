@@ -1,0 +1,34 @@
+logging:
+  level:
+    root: info
+    org.springframework.security: trace
+
+spring:
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:5432/OAuth
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 100
+      connection-timeout: 60000
+      minimum-idle: 10
+      idle-timeout: 500000
+      max-lifetime: 540000
+      connection-test-query: SELECT 1
+  data:
+    redis:
+      host: 127.0.0.1
+      port: 6379
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://auth-server:9000
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: target/classes/**
+
+custom:
+  id: 2
