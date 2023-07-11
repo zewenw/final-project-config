@@ -6,7 +6,7 @@ spring:
   devtools:
     restart:
       enabled: true
-      additional-paths: target\classes\config\application.yml
+      additional-paths: target/classes/**
 
 logging:
  level:
