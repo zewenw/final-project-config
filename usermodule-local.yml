@@ -25,6 +25,10 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: http://auth-server:9000
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: target/classes/**
 
 custom:
   id: 2
