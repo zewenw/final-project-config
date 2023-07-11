@@ -3,6 +3,10 @@ spring:
     redis:
       host: 127.0.0.1
       port: 6379
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: target\classes\config\application.yml
 
 logging:
  level:
