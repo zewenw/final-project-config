@@ -1,4 +1,6 @@
 spring:
+#  if open this, gateway module can't start success, but this is the samw
+#  with auth server config, I don't know why
 #  profiles:
 #    active: ${SPRING_PROFILES_ACTIVE}
   data:
