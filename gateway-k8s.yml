@@ -1,6 +1,6 @@
-spring:
-  profiles:
-    active: k8s
+#spring:
+#  profiles:
+#    active: k8s
   data:
     redis:
       host: ${SPRING_DATA_REDIS_HOST}
