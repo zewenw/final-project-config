@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE}
+  data:
+    redis:
+      host: ${SPRING_DATA_REDIS_HOST}
+      port: 6379
+  security:
+    oauth2:
+      client:
+        registration:
+          messaging_gateway_oidc:
+            provider: messaging_gateway_oidc
+            clientId: gateway_client
+            clientSecret: gateway_client_secret
+            scope:
+              - openid
+              - profile
+            authorizationGrantType: authorization_code
+            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
+        provider:
+          messaging_gateway_oidc:
+            issuer-uri: ${AUTHORIZATION_URL}
+            userInfoUri: ${AUTHORIZATION_URL}/userinfo
+            tokenUri: ${AUTHORIZATION_URL}/oauth2/token
+            authorizationUri: ${AUTHORIZATION_URL}/oauth2/authorize
+            jwkSetUri: ${AUTHORIZATION_URL}/oauth2/jwks
+
+eureka:
+  instance:
+    #    instance-id: ${spring.application.name}:${instanceId:${random.value}}}
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_CLIENT_SERVICEURL_DEFAULTZONE}
+
+logging:
+  level:
+    root: info
+    org.springframework.security: trace
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  zipkin:
+    tracing:
+      endpoint: ${MANAGEMENT_ZIPKIN_TRACING_ENDPOINT}
