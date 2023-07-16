@@ -16,6 +16,15 @@ spring:
       enabled: true
       additional-paths: target\classes\config\application.yml
 
+
+eureka:
+  instance:
+#    instance-id: ${spring.application.name}:${instanceId:${random.value}}}
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8999/eureka
+
 authorization:
   url: http://auth-server:${server.port}
 
