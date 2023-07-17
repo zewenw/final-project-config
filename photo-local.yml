@@ -1,8 +1,3 @@
-logging:
-  level:
-    root: info
-    org.springframework.security: trace
-
 spring:
   datasource:
     url: jdbc:postgresql://127.0.0.1:5432/OAuth
@@ -30,6 +25,14 @@ spring:
       enabled: true
       additional-paths: target/classes/**
 
+eureka:
+  instance:
+    prefer-ip-address: true
+  #    instance-id: ${spring.application.name}:${instanceId:${random.value}}}
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8999/eureka/
+
 management:
   tracing:
     sampling:
@@ -37,6 +40,11 @@ management:
   zipkin:
     tracing:
       endpoint: http://localhost:9411/api/v2/spans
+
+logging:
+  level:
+    root: info
+    org.springframework.security: trace
 
 photo:
   id: 2
