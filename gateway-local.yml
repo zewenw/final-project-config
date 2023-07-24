@@ -3,6 +3,14 @@ spring:
     redis:
       host: 127.0.0.1
       port: 6379
+      timeout: 1000
+      lettuce:
+        pool:
+          max-idle: 15
+          max-active: 20
+          min-idle: 5
+          max-wait: 500
+          time-between-eviction-runs: 200
   devtools:
     restart:
       enabled: true
