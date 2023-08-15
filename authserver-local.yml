@@ -30,8 +30,8 @@ authorization:
 
 logging:
   level:
-    root: info
-    org.springframework.security: info
+    root: trace
+    org.springframework.security: trace
 
 management:
   tracing:

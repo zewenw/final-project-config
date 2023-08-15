@@ -48,6 +48,7 @@ spring:
               - openid
               - profile
             authorizationGrantType: authorization_code
+#            redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
             redirectUri: "{baseUrl}/login/oauth2/code/{registrationId}"
         provider:
           messaging_gateway_oidc:
@@ -67,8 +68,8 @@ eureka:
 
 logging:
  level:
-   root: info
-   org.springframework.security: info
+   root: trace
+   org.springframework.security: trace
 
 management:
   tracing:
