@@ -60,7 +60,4 @@ management:
 logging:
   level:
     root: info
-    org.springframework.security: trace
-
-photo:
-  id: 2
+    org.springframework.security: info

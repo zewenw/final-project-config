@@ -61,6 +61,3 @@ logging:
   level:
     root: info
     org.springframework.security: info
-
-custom:
-  id: 2
