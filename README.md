@@ -1,2 +1,2 @@
-# final_project_config
+# final-project-config
 applicaiton.yml for springcloud config
