@@ -68,8 +68,8 @@ eureka:
 
 logging:
  level:
-   root: trace
-   org.springframework.security: trace
+   root: info
+   org.springframework.security: debug
 
 management:
   tracing:
