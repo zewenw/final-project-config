@@ -61,3 +61,6 @@ logging:
   level:
     root: info
     org.springframework.security: info
+
+login:
+  redirectUrl: http://localhost:5173/#/dashboard/main
